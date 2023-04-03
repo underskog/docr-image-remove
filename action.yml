@@ -22,4 +22,4 @@ runs:
   steps:
     - name: Remove images older than the last n versions
       shell: bash
-      run: ${{ github.action_path }}/remove_images.sh ${{ inputs.image_repository }} ${{ inputs.buffer_size }} ${{ inputs.exclude }}
+      run: ${{ github.action_path }}/remove_images.sh ${{ inputs.image_repository }} ${{ inputs.buffer_size }} '${{ inputs.exclude }}'
