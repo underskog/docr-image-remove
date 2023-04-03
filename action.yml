@@ -14,7 +14,7 @@ inputs:
     default: 10
     required: true
   exclude:
-    description: Tag regex to exclude. Example - ^(latest|tag1|tag2)$ 
+    description: Tag regex to exclude. Example - ^(latest|tag1|tag2)$
     required: false
     default: ''
 
