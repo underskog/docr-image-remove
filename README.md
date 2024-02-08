@@ -22,6 +22,13 @@ Add this step to a job to automatically delete older images as part of a job:
 - `buffer_size` - (Optional) Number of recent images. Default is `10`
 - `exclude` - (Optional) Regex expression to exclude in the tags to delete.
 
+# History
+Based on these efforts:
+
+- Initial work: https://github.com/ripplr-io/docr-image-remove
+- Digests instead of tags: https://github.com/martintomas/docr-image-remove
+- Exclude filter: https://github.com/NearSeaTechnologies/docr-image-remove
+
 ## License
 
 This GitHub Action and associated scripts and documentation in this project are released under the [MIT License](LICENSE).
