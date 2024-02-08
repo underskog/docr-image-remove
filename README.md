@@ -14,11 +14,13 @@ Add this step to a job to automatically delete older images as part of a job:
       with:
         image_repository: image-repository # required
         buffer_size: 10
+        exclude: ^(latest|tag1|tag2)$
 ```
 
 # Inputs
 - `image_repository` - (**Required**) Image repository name in the Container Registry
 - `buffer_size` - (Optional) Number of recent images. Default is `10`
+- `exclude` - (Optional) Regex expression to exclude in the tags to delete.
 
 ## License
 

@@ -12,10 +12,14 @@ inputs:
     description: Number of recent images. Default is 10
     required: false
     default: 10
+  exclude:
+    description: Tag regex to exclude. Example - ^(latest|tag1|tag2)$
+    required: false
+    default: ''
 
 runs:
   using: composite
   steps:
     - name: Remove images older than the last n versions
       shell: bash
-      run: ${{ github.action_path }}/remove_images.sh ${{ inputs.image_repository }} ${{ inputs.buffer_size }}
+      run: ${{ github.action_path }}/remove_images.sh ${{ inputs.image_repository }} ${{ inputs.buffer_size }} '${{ inputs.exclude }}'
