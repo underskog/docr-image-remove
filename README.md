@@ -10,7 +10,7 @@ Add this step to a job to automatically delete older images as part of a job:
 
 ```yaml
     - name: Remove old images from Container Registry
-      uses: martintomas/docr-image-remove@v1
+      uses: henrik242/docr-image-remove@v1
       with:
         image_repository: image-repository # required
         buffer_size: 10
