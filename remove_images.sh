@@ -3,3 +3,5 @@ for DIGEST in $DIGESTS; do
   doctl registry repository delete-manifest $1 $DIGEST --force
 done
 echo Manifest Digests removed: $DIGESTS
+
+doctl registry garbage-collection start --include-untagged-manifests --force
