@@ -1,7 +1,9 @@
 # DigitalOcean Image Remove
 This action uses [doctl](https://github.com/digitalocean/action-doctl) to find and remove old images from Digital Ocean's Container Registry.
 
-It gets the repository tags using `doctl registry repository lt` and orders them by the `UpdatedAt` attribute. By default it will ignore the 10 most recent images. It then deletes the older images using `doctl registry repository delete-manifest`.
+1) Gets the repository manifests using `doctl registry repository lm` and orders them by the `UpdatedAt` attribute. By default it will ignore the 10 most recent images 
+2) Then deletes the older images using `doctl registry repository delete-manifest`
+3) Lastly triggers garbage collection to reclaim space in the registry
 
 PRs are welcome.
 
