@@ -1,5 +1,5 @@
-name: DigitalOcean Container Registry Remove
-description: Remove old image tags from Digital Ocean's Container Registry
+name: DigitalOcean Container Registry Remove With Garbage Collection
+description: Remove old images from Digital Ocean's Container Registry
 branding:
   icon: 'trash'
   color: 'blue'
