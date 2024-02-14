@@ -11,6 +11,11 @@ PRs are welcome.
 Add this step to a job to automatically delete older images as part of a job:
 
 ```yaml
+  steps:
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ${{ secrets.DIGITALOCEAN_API_KEY }}
     - name: Remove old images from Container Registry
       uses: henrik242/docr-image-remove@v1
       with:
