@@ -17,7 +17,7 @@ Add this step to a job to automatically delete older images as part of a job:
       with:
         token: ${{ secrets.DIGITALOCEAN_API_KEY }}
     - name: Remove old images from Container Registry
-      uses: henrik242/docr-image-remove@v1
+      uses: underskog/docr-image-remove@v1
       with:
         image_repository: image-repository # required
         buffer_size: 10
